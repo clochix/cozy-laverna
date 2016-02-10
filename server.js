@@ -51,6 +51,7 @@ app.use('/', function (req, res, next) {
       .pipe(res);
   } else if (req.url === '/scripts/main.js'){
     res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
+    next();
   } else {    
     next();
   }
