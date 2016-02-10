@@ -49,7 +49,9 @@ app.use('/', function (req, res, next) {
       // hotfix of a bug in Laverna
       .pipe(replaceStream('notebookId:{type:"string"}', 'notebookId:{type:"number"}'))
       .pipe(res);
-  } else {
+  } else if (req.url === '/main.js'){
+    res.setHeader('Content-Type', 'application/javascript; charset=utf-8');
+  } else {    
     next();
   }
 });
