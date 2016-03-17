@@ -12,9 +12,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "postinstall": "rm -rf static-laverna && git clone -b gh-pages https://github.com/Laverna/static-laverna"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
